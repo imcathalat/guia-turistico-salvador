@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Album</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles/main.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg p-0">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><img src="assets/img/logo-ssa-grande-cortada.png" alt="Logo Salvador Lovers" height="100px"></a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse container-fluid  p-0" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex justify-content-end">
+            <li class="nav-item me-3">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="/details.html?id=1">Farol</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="/details.html?id=2">Elevador Lacerda</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="/details.html?id=5">Pelourinho</a>
+            </li>
+            <li class="nav-item me-3">
+              <a class="nav-link" href="/details.html?id=9">Alison</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!--DESCRIÇÃO DO ALBUM-->
+
+  <section class="m-5">
+    <div class="container" id="container-album-detail">
+
+      <!--IMG DO ALBUM-->
+      <div class="row">
+        <div class="col-xxl-5 col-xl-6 col-lg-5 col-md-6">
+          <img id="image-cover" src="" height="400px" class="card-img-top object-fit-cover" alt="">
+        </div>
+
+        <!--DESCRIÇÃO DO ALBUM-->
+          <div class="col-xxl-7 col-xl-6 col-lg-7 col-md-6 justify-content-center">
+            <div>
+              <h3 id="detail-name">Description</h3>
+              <p id="detail_description"></p>
+            </div>
+            <div class="container">
+              <div class="row">
+                <!--Localização-->
+                <div class=" col-xl-6 col-lg-6 col-md-6 p-0">
+                  <h3>Localização</h3>
+                  <p id="location-name"></p>
+                </div>
+
+                <!--Data de Registro-->
+                <div class=" col-xl-6 col-lg-6 col-md-6 p-0">
+                  <h3>Date</h3>
+                  <p id="detail-date"></p>
+                </div>
+              </div>
+              <div class="">
+                <input type="checkbox" id="destaque">
+                <label class="form-check-label p-2" for="highlight" id="destacar">
+                  Destacar
+                </label>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--FIM DESCRIÇÃO DO ALBUM-->
+
+  <!--ITENS-->
+  <section class="container">
+    <div class="row mt-5" id="card-container-detail">
+      <!--Cards serão criados via Js-->
+    </div>
+  </section>
+  <!--Fim Albuns-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- carrossel -->
+
+          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+            <div class="carousel-inner" id="carouselInner">
+              <!-- slides carregados dinamicamente aqui -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+          <!-- fim do carrossel -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="assets/scripts/details.js"></script>
+  <script src="assets/scripts/carousel-details.js"></script>
+</body>
+
+</html>
